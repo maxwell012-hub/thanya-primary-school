@@ -1,0 +1,32 @@
+{
+  "name": "Thanya Institute Of Learning",
+  "tagline": "Education beyond the obvious",
+  "description": "A nurturing educational environment empowering students to reach their full academic potential.",
+  "founded": 2012,
+  "phone": "+27 (0) 00 000 0000",
+  "email": "info@thanyainstitute.co.za",
+  "address": {
+    "street": "",
+    "suburb": "Town",
+    "city": "Rustenburg",
+    "province": "North West",
+    "postal": "0300",
+    "country": "South Africa"
+  },
+  "hours": {
+    "weekdays": "08:00 – 17:00",
+    "saturday": "09:00 – 13:00",
+    "sunday": "Closed"
+  },
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "twitter": "",
+    "linkedin": "",
+    "whatsapp": ""
+  },
+  "logo": "/images/logo.png",
+  "favicon": "/images/favicon.png",
+  "primaryColor": "#003d82",
+  "accentColor": "#f5a623"
+}

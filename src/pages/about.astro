@@ -1,0 +1,80 @@
+---
+// src/pages/about.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import company from '../../content/company.json';
+import aboutPage from '../../content/pages/about.json';
+import seo from '../../content/seo.json';
+import about from '../../content/about.json';
+---
+
+<BaseLayout
+  title={seo.pages.about.title}
+  description={seo.pages.about.description}
+>
+  <div class="page-hero">
+    <div class="container">
+      <h1>{aboutPage.headline}</h1>
+      <p>{company.tagline}</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="placeholder-image" style="height: 100%; min-height: 400px; border-radius: 1.25rem;">
+            <div>
+              <img src={about.image} alt={about.title} loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="section-label">Our Story</span>
+          <h2>{company.name}</h2>
+          <p>{aboutPage.story}</p>
+          <p>{aboutPage.mission}</p>
+          <div class="values-list">
+            <div class="value-item">
+              <span class="value-check">✓</span>
+              <div>
+                <strong>Our Mission</strong><br/>
+                <span style="color: var(--color-text-muted); font-size: var(--text-sm);">{aboutPage.mission}</span>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="value-check">✓</span>
+              <div>
+                <strong>Our Vision</strong><br/>
+                <span style="color: var(--color-text-muted); font-size: var(--text-sm);">{aboutPage.vision}</span>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="value-check">✓</span>
+              <div>
+                <strong>Founded</strong><br/>
+                <span style="color: var(--color-text-muted); font-size: var(--text-sm);">Established in {company.founded}</span>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="/contact" class="btn btn-primary btn-lg">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <span class="section-label" style="color: var(--color-accent);">Work With Us</span>
+      <h2 class="section-title">Ready to Get Started?</h2>
+      <p class="section-subtitle">
+        We'd love to hear about your project and how we can help.
+      </p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-accent btn-lg">Contact Us Today</a>
+        <a href="/services" class="btn btn-ghost btn-lg">View Our Services</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

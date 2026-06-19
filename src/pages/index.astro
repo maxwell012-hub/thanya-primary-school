@@ -1,0 +1,132 @@
+---
+// src/pages/index.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import company from '../../content/company.json';
+import homePage from '../../content/pages/home.json';
+import services from '../../content/services.json';
+import testimonials from '../../content/testimonials.json';
+import seo from '../../content/seo.json';
+---
+
+<BaseLayout 
+  title={seo.pages.home.title}
+  description={seo.pages.home.description}
+>
+  <!-- Hero -->
+  <section class="hero">
+    {homePage.hero.backgroundImage && (
+      <div 
+        class="hero-bg" 
+        style={`background-image: url('${homePage.hero.backgroundImage}')`}
+        aria-hidden="true"
+      ></div>
+    )}
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-label">{company.name}</span>
+        <h1 class="hero-headline">{homePage.hero.headline}</h1>
+        <p class="hero-subheadline">{homePage.hero.subheadline}</p>
+        <div class="hero-actions">
+          <a href={homePage.hero.ctaPrimary.href} class="btn btn-accent btn-lg">
+            {homePage.hero.ctaPrimary.label}
+          </a>
+          <a href={homePage.hero.ctaSecondary.href} class="btn btn-ghost btn-lg">
+            {homePage.hero.ctaSecondary.label}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  {homePage.showStats && (
+    <div class="stats-bar">
+      <div class="container">
+        <div class="stats-grid">
+          {homePage.stats.map((stat: {value: string; label: string}) => (
+            <div class="stat-item">
+              <div class="stat-value">{stat.value}</div>
+              <div class="stat-label">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Services Preview -->
+  {homePage.featuredServices && (
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What We Offer</span>
+          <h2 class="section-title">{services.headline}</h2>
+          <p class="section-subtitle">{services.subheadline}</p>
+        </div>
+        <div class="services-grid">
+          {services.services.slice(0, 3).map((service: {image: string; title: string; description: string; price: string}) => (
+            <div class="service-card">
+              <div class="service-image"><img src={service.image} alt={service.title} loading="lazy" /></div>
+              <h3 class="service-title">{service.title}</h3>
+              <p class="service-desc">{service.description}</p>
+              <span class="service-price">{service.price}</span>
+            </div>
+          ))}
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="/services" class="btn btn-primary btn-lg">View All Services</a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Testimonials -->
+  {homePage.featuredTestimonials && (
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Client Feedback</span>
+          <h2 class="section-title">{testimonials.headline}</h2>
+          <p class="section-subtitle">{testimonials.subheadline}</p>
+        </div>
+        <div class="testimonials-grid">
+          {testimonials.testimonials.slice(0, 3).map((t: {rating: number; text: string; name: string; company: string; avatar: string}) => (
+            <div class="testimonial-card">
+              <div class="testimonial-stars">{'★'.repeat(t.rating)}</div>
+              <p class="testimonial-text">"{t.text}"</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">
+                  {t.avatar 
+                    ? <img src={t.avatar} alt={t.name} width="44" height="44" />
+                    : t.name.charAt(0)
+                  }
+                </div>
+                <div>
+                  <div class="testimonial-name">{t.name}</div>
+                  <div class="testimonial-company">{t.company}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <span class="section-label" style="color: var(--color-accent);">Ready to get started?</span>
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="section-subtitle">
+        Contact us today and discover how {company.name} can help you.
+      </p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-accent btn-lg">Get a Free Quote</a>
+        <a href="tel:{company.phone}" class="btn btn-ghost btn-lg">
+          📞 {company.phone}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

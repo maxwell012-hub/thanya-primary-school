@@ -1,0 +1,10 @@
+{
+  "headline": "Contact Us",
+  "subheadline": "admin@thanya.co.za",
+  "formEnabled": true,
+  "mapEnabled": false,
+  "mapEmbedUrl": "",
+  "ctaText": "Send Message",
+  "successMessage": "Thank You for contacting us, we'll respond to you shortly.",
+  "errorMessage": "Something went wrong. Please try again."
+}

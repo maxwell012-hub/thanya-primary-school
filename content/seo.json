@@ -1,0 +1,41 @@
+{
+  "siteName": "Thanya Primary School",
+  "siteUrl": "https://thanyainstituteoflearning.co.za",
+  "defaultTitle": "Thanya Primary School | Shaping Tomorrow's Leaders Today",
+  "defaultDescription": "A nurturing educational environment empowering students to reach their full academic potential.",
+  "keywords": [
+    "school",
+    "education",
+    "learning",
+    "academic",
+    "students",
+    "South Africa"
+  ],
+  "ogImage": "/images/og-image.jpg",
+  "twitterHandle": "",
+  "locale": "en_ZA",
+  "themeColor": "#003d82",
+  "generator": "MaxG Site Manager",
+  "pages": {
+    "home": {
+      "title": "Thanya Primary School | Shaping Tomorrow's Leaders Today",
+      "description": "A nurturing educational environment empowering students to reach their full academic potential."
+    },
+    "about": {
+      "title": "About Us | Thanya Primary School",
+      "description": "Learn more about Thanya Primary School and our professional team."
+    },
+    "services": {
+      "title": "Our Services | Thanya Primary School",
+      "description": "Explore our full range of professional services."
+    },
+    "gallery": {
+      "title": "Gallery | Thanya Primary School",
+      "description": "View our work and project portfolio."
+    },
+    "contact": {
+      "title": "Contact Us | Thanya Primary School",
+      "description": "Get in touch with Thanya Primary School today."
+    }
+  }
+}

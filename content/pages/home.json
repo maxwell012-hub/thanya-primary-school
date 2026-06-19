@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "headline": "Excellence in Education",
+    "subheadline": "Where every learner is empowered to reach their potential.",
+    "ctaPrimary": {
+      "label": "Contact Us",
+      "href": "/contact"
+    },
+    "ctaSecondary": {
+      "label": "Our School",
+      "href": "/services"
+    },
+    "backgroundImage": "/images/background.png"
+  },
+  "featuredServices": true,
+  "featuredTestimonials": true,
+  "showStats": true,
+  "stats": [
+    {
+      "value": "1200+",
+      "label": "Current Learners"
+    },
+    {
+      "value": "",
+      "label": ""
+    },
+    {
+      "value": "10+",
+      "label": "Years of Excellence"
+    }
+  ]
+}

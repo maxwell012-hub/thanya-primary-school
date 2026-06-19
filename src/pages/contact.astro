@@ -1,0 +1,157 @@
+---
+// src/pages/contact.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import company from '../../content/company.json';
+import contact from '../../content/contact.json';
+import seo from '../../content/seo.json';
+---
+
+<BaseLayout
+  title={seo.pages.contact.title}
+  description={seo.pages.contact.description}
+>
+  <div class="page-hero">
+    <div class="container">
+      <h1>{contact.headline}</h1>
+      <p>{contact.subheadline}</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <span class="section-label">Reach Us</span>
+          <h2 style="font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 800; margin-bottom: 2rem;">
+            Let's Start a Conversation
+          </h2>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-info-label">Phone</div>
+              <a href={`tel:${company.phone}`} class="contact-info-value">{company.phone}</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <a href={`mailto:${company.email}`} class="contact-info-value">{company.email}</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-info-label">Address</div>
+              <div class="contact-info-value">
+                {company.address.street}<br/>
+                {company.address.suburb}, {company.address.city}<br/>
+                {company.address.province} {company.address.postal}
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <div class="contact-info-label">Hours</div>
+              <div class="contact-info-value" style="font-size: var(--text-sm);">
+                Mon–Fri: {company.hours.weekdays}<br/>
+                Saturday: {company.hours.saturday}<br/>
+                Sunday: {company.hours.sunday}
+              </div>
+            </div>
+          </div>
+
+          {company.social.whatsapp && (
+            <a 
+              href={`https://wa.me/${company.social.whatsapp}`} 
+              target="_blank" 
+              rel="noopener"
+              class="btn btn-primary"
+              style="margin-top: 1.5rem;"
+            >
+              💬 WhatsApp Us
+            </a>
+          )}
+        </div>
+
+        <!-- Contact Form -->
+        {contact.formEnabled && (
+          <div class="contact-form">
+            <h3 style="font-family: var(--font-display); font-size: var(--text-xl); font-weight: 700; margin-bottom: 1.5rem;">
+              Send Us a Message
+            </h3>
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="name">Full Name *</label>
+                  <input type="text" id="name" name="name" class="form-input" required placeholder="Your full name" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. 082 000 0000" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-input" required placeholder="your@email.com" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="How can we help?" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Message *</label>
+                <textarea id="message" name="message" class="form-textarea" required placeholder="Tell us about your enquiry..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                {contact.ctaText}
+              </button>
+              <div id="form-feedback" style="margin-top: 1rem; display: none;"></div>
+            </form>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const feedback = document.getElementById('form-feedback');
+  
+  if (form && feedback) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      
+      // Basic client-side validation
+      const name = (form.querySelector('#name') as HTMLInputElement).value.trim();
+      const email = (form.querySelector('#email') as HTMLInputElement).value.trim();
+      const message = (form.querySelector('#message') as HTMLTextAreaElement).value.trim();
+      
+      if (!name || !email || !message) {
+        feedback.style.display = 'block';
+        feedback.innerHTML = '<div style="color: #dc2626; padding: 0.75rem 1rem; background: #fef2f2; border-radius: 0.5rem; font-size: 0.875rem;">Please fill in all required fields.</div>';
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+        return;
+      }
+
+      // Simulate form success (replace with real endpoint)
+      await new Promise(r => setTimeout(r, 1000));
+      feedback.style.display = 'block';
+      feedback.innerHTML = '<div style="color: #16a34a; padding: 0.75rem 1rem; background: #f0fdf4; border-radius: 0.5rem; font-size: 0.875rem;">✓ Thank you! We\'ll be in touch shortly.</div>';
+      form.reset();
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+    });
+  }
+</script>

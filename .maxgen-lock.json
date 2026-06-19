@@ -1,0 +1,112 @@
+{
+  "generatedFrom": {
+    "adopted": true,
+    "at": "2026-06-18"
+  },
+  "files": {
+    ".gitignore": {
+      "kind": "component",
+      "hash": "sha256:625cb1e08d51e14c"
+    },
+    "README.md": {
+      "kind": "component",
+      "hash": "sha256:5012737215a0cf82"
+    },
+    "astro.config.mjs": {
+      "kind": "component",
+      "hash": "sha256:1ab967859a6db64b"
+    },
+    "content/company.json": {
+      "kind": "component",
+      "hash": "sha256:0c53502d3c49aacc"
+    },
+    "content/contact.json": {
+      "kind": "component",
+      "hash": "sha256:2d1b6dfd25671364"
+    },
+    "content/gallery.json": {
+      "kind": "component",
+      "hash": "sha256:64c71ceaa0ec8436"
+    },
+    "content/pages/about.json": {
+      "kind": "component",
+      "hash": "sha256:fba94e89e5b16a54"
+    },
+    "content/pages/home.json": {
+      "kind": "component",
+      "hash": "sha256:108ea3ce99c01599"
+    },
+    "content/seo.json": {
+      "kind": "component",
+      "hash": "sha256:daf4532e193b209e"
+    },
+    "content/services.json": {
+      "kind": "component",
+      "hash": "sha256:1ed58e29c3e45099"
+    },
+    "content/testimonials.json": {
+      "kind": "component",
+      "hash": "sha256:2392bf4851087630"
+    },
+    "maxg.json": {
+      "kind": "component",
+      "hash": "sha256:cb769e6dfdbf5c2d"
+    },
+    "package-lock.json": {
+      "kind": "component",
+      "hash": "sha256:29fd51eb508b7b1d"
+    },
+    "package.json": {
+      "kind": "component",
+      "hash": "sha256:e1b2a6adf028755d"
+    },
+    "public/images/.gitkeep": {
+      "kind": "component",
+      "hash": "sha256:e3b0c44298fc1c14"
+    },
+    "src/env.d.ts": {
+      "kind": "component",
+      "hash": "sha256:cc719d1ef0609cd7"
+    },
+    "src/layouts/BaseLayout.astro": {
+      "kind": "component",
+      "hash": "sha256:3d82f0b8fabcce26"
+    },
+    "src/pages/404.astro": {
+      "kind": "component",
+      "hash": "sha256:21ce77feb76905fd"
+    },
+    "src/pages/about.astro": {
+      "kind": "component",
+      "hash": "sha256:dbb95b973d608389"
+    },
+    "src/pages/contact.astro": {
+      "kind": "component",
+      "hash": "sha256:ea13f28622fe54bd"
+    },
+    "src/pages/gallery.astro": {
+      "kind": "component",
+      "hash": "sha256:94d8414a4165304d"
+    },
+    "src/pages/index.astro": {
+      "kind": "component",
+      "hash": "sha256:6ae0184892a73f9d"
+    },
+    "src/pages/services.astro": {
+      "kind": "component",
+      "hash": "sha256:eeb36df430163f86"
+    },
+    "src/styles/global.css": {
+      "kind": "component",
+      "hash": "sha256:529fdcbdabcb3494"
+    },
+    "tsconfig.json": {
+      "kind": "component",
+      "hash": "sha256:1cec541264dcdf0f"
+    },
+    "vercel.json": {
+      "kind": "component",
+      "hash": "sha256:a4af88c2c6ecfe5c"
+    }
+  }
+}

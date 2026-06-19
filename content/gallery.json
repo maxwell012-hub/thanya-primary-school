@@ -1,0 +1,29 @@
+{
+  "headline": "Our Work",
+  "subheadline": "A look at some of our recent projects",
+  "categories": [
+    "All",
+    "Recent",
+    "Featured"
+  ],
+  "images": [
+    {
+      "src": "/images/background.png",
+      "alt": "Project photo",
+      "category": "Recent",
+      "caption": "Project 1"
+    },
+    {
+      "src": "/images/gallery/gallery-2.jpg",
+      "alt": "Project photo",
+      "category": "Recent",
+      "caption": "Project 2"
+    },
+    {
+      "src": "/images/gallery/gallery-3.jpg",
+      "alt": "Project photo",
+      "category": "Featured",
+      "caption": "Featured Project"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "headline": "What Our Clients Say",
+  "subheadline": "Real feedback from real people",
+  "testimonials": [
+    {
+      "name": "Thabo Mokoena",
+      "company": "Local Business Owner",
+      "text": "Exceptional service and professionalism. Highly recommended.",
+      "rating": 5,
+      "avatar": ""
+    },
+    {
+      "name": "Naledi Dlamini",
+      "company": "Satisfied Client",
+      "text": "They went above and beyond. Will definitely use them again.",
+      "rating": 5,
+      "avatar": ""
+    },
+    {
+      "name": "Sipho van der Merwe",
+      "company": "Regular Customer",
+      "text": "Reliable, affordable, and always on time. Great team.",
+      "rating": 5,
+      "avatar": ""
+    }
+  ]
+}

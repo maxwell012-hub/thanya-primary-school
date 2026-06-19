@@ -1,0 +1,43 @@
+---
+// src/pages/gallery.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import gallery from '../../content/gallery.json';
+import seo from '../../content/seo.json';
+---
+
+<BaseLayout
+  title={seo.pages.gallery.title}
+  description={seo.pages.gallery.description}
+>
+  <div class="page-hero">
+    <div class="container">
+      <h1>{gallery.headline}</h1>
+      <p>{gallery.subheadline}</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      {gallery.images.length > 0 ? (
+        <div class="gallery-grid">
+          {gallery.images.map((img: {src: string; alt: string; caption: string}) => (
+            <div class="gallery-item">
+              <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
+              {img.caption && <div class="gallery-caption">{img.caption}</div>}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="placeholder-image" style="min-height: 400px; border-radius: 1.25rem;">
+          <div>
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🖼️</div>
+            <p style="font-size: 1.1rem; font-weight: 600;">No gallery images yet</p>
+            <p style="margin-top: 0.5rem; color: var(--color-text-light);">
+              Run <code style="background: var(--color-bg-muted); padding: 2px 8px; border-radius: 4px;">maxg edit gallery</code> to add images
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

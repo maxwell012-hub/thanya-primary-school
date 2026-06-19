@@ -1,0 +1,44 @@
+{
+  "generatedFrom": {
+    "adopted": true,
+    "at": "2026-06-18"
+  },
+  "files": {
+    "env.d.ts": {
+      "kind": "component",
+      "hash": "sha256:cc719d1ef0609cd7"
+    },
+    "layouts/BaseLayout.astro": {
+      "kind": "component",
+      "hash": "sha256:3d82f0b8fabcce26"
+    },
+    "pages/404.astro": {
+      "kind": "component",
+      "hash": "sha256:21ce77feb76905fd"
+    },
+    "pages/about.astro": {
+      "kind": "component",
+      "hash": "sha256:dbb95b973d608389"
+    },
+    "pages/contact.astro": {
+      "kind": "component",
+      "hash": "sha256:ea13f28622fe54bd"
+    },
+    "pages/gallery.astro": {
+      "kind": "component",
+      "hash": "sha256:94d8414a4165304d"
+    },
+    "pages/index.astro": {
+      "kind": "component",
+      "hash": "sha256:6ae0184892a73f9d"
+    },
+    "pages/services.astro": {
+      "kind": "component",
+      "hash": "sha256:eeb36df430163f86"
+    },
+    "styles/global.css": {
+      "kind": "component",
+      "hash": "sha256:529fdcbdabcb3494"
+    }
+  }
+}
