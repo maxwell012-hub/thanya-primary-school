@@ -1,0 +1,49 @@
+{
+  "headline": "School Events",
+  "subheadline": "Catch up on what's been happening across our campuses",
+  "expiryMonths": 3,
+  "events": [
+    {
+      "title": "Inter-Campus Sports Day",
+      "date": "2026-06-12",
+      "campus": "Campus 1 – Paardekraal",
+      "image": "/images/events/sports-day.svg",
+      "description": "Learners from all three campuses came together for a day of athletics, team games, and friendly competition, ending with a prize-giving ceremony on the main field."
+    },
+    {
+      "title": "Grade 7 Science Expo",
+      "date": "2026-05-28",
+      "campus": "Campus 2 – Sunrise Park",
+      "image": "/images/events/science-expo.svg",
+      "description": "Our Grade 7 learners showcased independent science projects ranging from renewable energy models to plant biology experiments, judged by local STEM professionals."
+    },
+    {
+      "title": "Heritage Day Cultural Celebration",
+      "date": "2026-05-10",
+      "campus": "Campus 3 – Heystek Street",
+      "image": "/images/events/heritage-day.svg",
+      "description": "Learners and staff celebrated South Africa's diverse cultures with traditional dress, music, dance performances, and a multicultural food fair."
+    },
+    {
+      "title": "Parent-Teacher Evening",
+      "date": "2026-04-22",
+      "campus": "Campus 1 – Paardekraal",
+      "image": "/images/events/parent-teacher.svg",
+      "description": "Parents and guardians met with class teachers to discuss term progress, with feedback sessions and a tour of the new computer lab."
+    },
+    {
+      "title": "Winter Reading Challenge Prize-Giving",
+      "date": "2026-03-30",
+      "campus": "Campus 2 – Sunrise Park",
+      "image": "/images/events/reading-challenge.svg",
+      "description": "Top readers from the Foundation and Intermediate Phases were recognised for completing the term's reading challenge, with new books awarded as prizes."
+    },
+    {
+      "title": "Annual Spring Fete",
+      "date": "2026-02-14",
+      "campus": "Campus 3 – Heystek Street",
+      "image": "/images/events/spring-fete.svg",
+      "description": "Our community fete featured stalls, games, live entertainment, and raised funds for new playground equipment. This event has now passed its display window."
+    }
+  ]
+}

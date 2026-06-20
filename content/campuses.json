@@ -1,0 +1,33 @@
+{
+  "headline": "Our Campuses",
+  "subheadline": "Three campuses across Rustenburg, one shared commitment to every learner",
+  "campuses": [
+    {
+      "name": "Campus 1 – Paardekraal",
+      "phase": "Foundation Phase (Grade R–3)",
+      "address": "Paardekraal, Rustenburg, North West, South Africa",
+      "phone": "+27 (0) 00 000 0000",
+      "email": "paardekraal@thanya.co.za",
+      "hours": "Mon–Fri: 07:00 – 16:00",
+      "mapQuery": "Paardekraal, Rustenburg, North West, South Africa"
+    },
+    {
+      "name": "Campus 2 – Sunrise Park",
+      "phase": "Intermediate Phase (Grade 4–6)",
+      "address": "Sunrise Park, Rustenburg, North West, South Africa",
+      "phone": "+27 (0) 00 000 0000",
+      "email": "sunrisepark@thanya.co.za",
+      "hours": "Mon–Fri: 07:00 – 16:00",
+      "mapQuery": "Sunrise Park, Rustenburg, North West, South Africa"
+    },
+    {
+      "name": "Campus 3 – Heystek Street",
+      "phase": "Senior & FET Phase (Grade 7–12)",
+      "address": "Heystek Street, Rustenburg, North West, South Africa",
+      "phone": "+27 (0) 00 000 0000",
+      "email": "heystek@thanya.co.za",
+      "hours": "Mon–Fri: 07:00 – 16:00",
+      "mapQuery": "Heystek Street, Rustenburg, North West, South Africa"
+    }
+  ]
+}

@@ -20,8 +20,8 @@ import seo from '../../content/seo.json';
     <div class="container">
       {gallery.images.length > 0 ? (
         <div class="gallery-grid">
-          {gallery.images.map((img: {src: string; alt: string; caption: string}) => (
-            <div class="gallery-item">
+          {gallery.images.map((img: {src: string; alt: string; caption: string}, i: number) => (
+            <div class={`gallery-item reveal reveal-delay-${Math.min((i % 6) + 1, 6)}`}>
               <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
               {img.caption && <div class="gallery-caption">{img.caption}</div>}
             </div>

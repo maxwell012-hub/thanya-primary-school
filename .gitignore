@@ -11,3 +11,4 @@ node_modules/
 
 # MaxG
 .maxg-cache/
+.vercel

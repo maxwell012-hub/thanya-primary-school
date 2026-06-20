@@ -1,0 +1,77 @@
+---
+// src/pages/events.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import eventsData from '../../content/events.json';
+import seo from '../../content/seo.json';
+
+interface SchoolEvent {
+  title: string;
+  date: string;
+  campus: string;
+  image: string;
+  description: string;
+}
+
+const MONTH_NAMES = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+// An event stays visible on the page for `expiryMonths` months after its date.
+const expiryMonths = eventsData.expiryMonths ?? 3;
+const now = new Date();
+const cutoff = new Date(now);
+cutoff.setMonth(cutoff.getMonth() - expiryMonths);
+
+const visibleEvents = (eventsData.events as SchoolEvent[])
+  .filter((evt) => new Date(evt.date) >= cutoff)
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+---
+
+<BaseLayout
+  title={seo.pages.events.title}
+  description={seo.pages.events.description}
+>
+  <div class="page-hero">
+    <div class="container">
+      <h1>{eventsData.headline}</h1>
+      <p>{eventsData.subheadline}</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      {visibleEvents.length > 0 ? (
+        <div class="events-grid">
+          {visibleEvents.map((evt, i) => {
+            const d = new Date(evt.date);
+            const day = d.getDate();
+            const month = MONTH_NAMES[d.getMonth()];
+            const delayClass = `reveal-delay-${Math.min((i % 6) + 1, 6)}`;
+            return (
+              <div class={`event-card reveal ${delayClass}`}>
+                <div class="event-image">
+                  <img src={evt.image} alt={evt.title} loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22%3E%3Crect width=%22400%22 height=%22250%22 fill=%22%23f1f5f9%22/%3E%3C/svg%3E'" />
+                  <div class="event-date-badge">
+                    <div class="event-date-day">{day}</div>
+                    <div class="event-date-month">{month}</div>
+                  </div>
+                </div>
+                <div class="event-body">
+                  <span class="event-campus-tag">{evt.campus}</span>
+                  <h3 class="event-title">{evt.title}</h3>
+                  <p class="event-desc">{evt.description}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <div class="events-empty">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">📅</div>
+          <p style="font-size: 1.1rem; font-weight: 600;">No recent events to show</p>
+          <p style="margin-top: 0.5rem; color: var(--color-text-light);">
+            Check back soon — events are shown here for {expiryMonths} months after they happen.
+          </p>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

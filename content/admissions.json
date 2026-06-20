@@ -1,0 +1,32 @@
+{
+  "headline": "Admissions",
+  "subheadline": "Begin your child's journey with Thanya Primary School",
+  "intro": "We welcome applications from parents and guardians throughout the year. Download the official learner application form below, complete it, and submit it to any of our three campuses along with the required supporting documents.",
+  "formFile": "/documents/learner-application-form.pdf",
+  "formLabel": "Learner Application Form (PDF)",
+  "steps": [
+    {
+      "title": "Download the Form",
+      "description": "Click the download button below to get the official Thanya Primary School learner application form."
+    },
+    {
+      "title": "Complete the Details",
+      "description": "Fill in learner information, parent/guardian details, and emergency contact information."
+    },
+    {
+      "title": "Gather Supporting Documents",
+      "description": "Prepare a certified copy of the learner's birth certificate, proof of residence, and the most recent school report (if applicable)."
+    },
+    {
+      "title": "Submit to Your Nearest Campus",
+      "description": "Hand-deliver or email the completed form to the campus office of your choice. Our admissions team will contact you to confirm receipt."
+    }
+  ],
+  "requiredDocuments": [
+    "Certified copy of learner's birth certificate",
+    "Certified copy of parent/guardian ID",
+    "Proof of residence (not older than 3 months)",
+    "Most recent school report (if transferring)",
+    "Proof of immunisation (Foundation Phase applicants)"
+  ]
+}

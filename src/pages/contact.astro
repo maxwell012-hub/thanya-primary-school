@@ -21,7 +21,7 @@ import seo from '../../content/seo.json';
     <div class="container">
       <div class="contact-grid">
         <!-- Contact Info -->
-        <div class="contact-info">
+        <div class="contact-info reveal">
           <span class="section-label">Reach Us</span>
           <h2 style="font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 800; margin-bottom: 2rem;">
             Let's Start a Conversation
@@ -78,11 +78,15 @@ import seo from '../../content/seo.json';
               💬 WhatsApp Us
             </a>
           )}
+
+          <p style="margin-top: 2rem; font-size: var(--text-sm); color: var(--color-text-muted);">
+            Looking for a specific campus? <a href="/campuses" style="color: var(--color-primary); font-weight: 600;">View all 3 campus locations →</a>
+          </p>
         </div>
 
         <!-- Contact Form -->
         {contact.formEnabled && (
-          <div class="contact-form">
+          <div class="contact-form reveal reveal-delay-1">
             <h3 style="font-family: var(--font-display); font-size: var(--text-xl); font-weight: 700; margin-bottom: 1.5rem;">
               Send Us a Message
             </h3>

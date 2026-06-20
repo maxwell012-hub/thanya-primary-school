@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003d82"/>
+      <stop offset="100%" stop-color="#001f42"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <circle cx="700" cy="80" r="120" fill="#f5a623" opacity="0.15"/>
+  <circle cx="60" cy="450" r="160" fill="#f5a623" opacity="0.1"/>
+  <text x="400" y="230" font-size="90" text-anchor="middle" dominant-baseline="middle">🎭</text>
+  <text x="400" y="320" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">Heritage Day</text>
+  <rect x="340" y="345" width="120" height="4" fill="#f5a623"/>
+</svg>

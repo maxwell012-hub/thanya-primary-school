@@ -3,14 +3,14 @@
     "headline": "Excellence in Education",
     "subheadline": "Where every learner is empowered to reach their potential.",
     "ctaPrimary": {
-      "label": "Contact Us",
-      "href": "/contact"
+      "label": "Apply Now",
+      "href": "/admissions"
     },
     "ctaSecondary": {
-      "label": "Our School",
-      "href": "/services"
+      "label": "Our Campuses",
+      "href": "/campuses"
     },
-    "backgroundImage": "/images/background.png"
+    "backgroundImage": "/images/hero.jpg"
   },
   "featuredServices": true,
   "featuredTestimonials": true,
@@ -21,11 +21,11 @@
       "label": "Current Learners"
     },
     {
-      "value": "",
-      "label": ""
+      "value": "98%",
+      "label": "Matric Pass Rate"
     },
     {
-      "value": "10+",
+      "value": "30+",
       "label": "Years of Excellence"
     }
   ]

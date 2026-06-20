@@ -4,7 +4,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import company from '../../content/company.json';
 import aboutPage from '../../content/pages/about.json';
 import seo from '../../content/seo.json';
-import about from '../../content/about.json';
 ---
 
 <BaseLayout
@@ -21,14 +20,15 @@ import about from '../../content/about.json';
   <section class="section">
     <div class="container">
       <div class="about-grid">
-        <div class="about-image">
+        <div class="about-image reveal">
           <div class="placeholder-image" style="height: 100%; min-height: 400px; border-radius: 1.25rem;">
             <div>
-              <img src={about.image} alt={about.title} loading="lazy" />
+              <div style="font-size: 3rem; margin-bottom: 1rem;">🏫</div>
+              <p>Add a school image<br/>at /public/images/about.jpg</p>
             </div>
           </div>
         </div>
-        <div class="about-text">
+        <div class="about-text reveal reveal-delay-1">
           <span class="section-label">Our Story</span>
           <h2>{company.name}</h2>
           <p>{aboutPage.story}</p>
@@ -56,8 +56,9 @@ import about from '../../content/about.json';
               </div>
             </div>
           </div>
-          <div style="margin-top: 2rem;">
-            <a href="/contact" class="btn btn-primary btn-lg">Get in Touch</a>
+          <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="/admissions" class="btn btn-primary btn-lg">Apply Now</a>
+            <a href="/campuses" class="btn btn-outline btn-lg">Visit Our Campuses</a>
           </div>
         </div>
       </div>
@@ -65,15 +66,15 @@ import about from '../../content/about.json';
   </section>
 
   <section class="cta-section">
-    <div class="container">
-      <span class="section-label" style="color: var(--color-accent);">Work With Us</span>
+    <div class="container reveal">
+      <span class="section-label" style="color: var(--color-accent);">Join Our School</span>
       <h2 class="section-title">Ready to Get Started?</h2>
       <p class="section-subtitle">
-        We'd love to hear about your project and how we can help.
+        We'd love to welcome your child to our school community.
       </p>
       <div class="cta-actions">
-        <a href="/contact" class="btn btn-accent btn-lg">Contact Us Today</a>
-        <a href="/services" class="btn btn-ghost btn-lg">View Our Services</a>
+        <a href="/admissions" class="btn btn-accent btn-lg">Apply Now</a>
+        <a href="/services" class="btn btn-ghost btn-lg">View Academics</a>
       </div>
     </div>
   </section>

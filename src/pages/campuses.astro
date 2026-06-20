@@ -1,0 +1,84 @@
+---
+// src/pages/campuses.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import campusesData from '../../content/campuses.json';
+import seo from '../../content/seo.json';
+
+interface Campus {
+  name: string;
+  phase: string;
+  address: string;
+  phone: string;
+  email: string;
+  hours: string;
+  mapQuery: string;
+}
+
+const campuses = campusesData.campuses as Campus[];
+---
+
+<BaseLayout
+  title={seo.pages.campuses.title}
+  description={seo.pages.campuses.description}
+>
+  <div class="page-hero">
+    <div class="container">
+      <h1>{campusesData.headline}</h1>
+      <p>{campusesData.subheadline}</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="campuses-list">
+        {campuses.map((campus, i) => {
+          const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(campus.mapQuery)}&output=embed`;
+          return (
+            <div class={`campus-block reveal reveal-delay-${i + 1}`}>
+              <div class="campus-details">
+                <span class="campus-phase">{campus.phase}</span>
+                <h2 class="campus-name">{campus.name}</h2>
+
+                <div class="campus-detail-row">
+                  <span class="campus-detail-icon">📍</span>
+                  <span>{campus.address}</span>
+                </div>
+                <div class="campus-detail-row">
+                  <span class="campus-detail-icon">📞</span>
+                  <span>{campus.phone}</span>
+                </div>
+                <div class="campus-detail-row">
+                  <span class="campus-detail-icon">✉️</span>
+                  <span>{campus.email}</span>
+                </div>
+                <div class="campus-detail-row">
+                  <span class="campus-detail-icon">🕒</span>
+                  <span>{campus.hours}</span>
+                </div>
+
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(campus.mapQuery)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline"
+                  style="margin-top: 1.5rem; width: fit-content;"
+                >
+                  Get Directions
+                </a>
+              </div>
+              <div class="campus-map">
+                <iframe
+                  src={mapSrc}
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title={`Map showing ${campus.name}`}
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,16 +1,16 @@
 {
-  "name": "Thanya Institute Of Learning",
-  "tagline": "Education beyond the obvious",
+  "name": "Thanya Primary School",
+  "tagline": "Shaping Tomorrow's Leaders Today",
   "description": "A nurturing educational environment empowering students to reach their full academic potential.",
-  "founded": 2012,
+  "founded": 2026,
   "phone": "+27 (0) 00 000 0000",
-  "email": "info@thanyainstitute.co.za",
+  "email": "info@yourbusiness.co.za",
   "address": {
-    "street": "",
-    "suburb": "Town",
-    "city": "Rustenburg",
-    "province": "North West",
-    "postal": "0300",
+    "street": "123 Business Street",
+    "suburb": "Sandton",
+    "city": "Johannesburg",
+    "province": "Gauteng",
+    "postal": "2196",
     "country": "South Africa"
   },
   "hours": {
@@ -26,7 +26,7 @@
     "whatsapp": ""
   },
   "logo": "/images/logo.png",
-  "favicon": "/images/favicon.png",
+  "favicon": "/images/favicon.ico",
   "primaryColor": "#003d82",
   "accentColor": "#f5a623"
 }

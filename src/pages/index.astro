@@ -43,12 +43,21 @@ import seo from '../../content/seo.json';
     <div class="stats-bar">
       <div class="container">
         <div class="stats-grid">
-          {homePage.stats.map((stat: {value: string; label: string}) => (
-            <div class="stat-item">
-              <div class="stat-value">{stat.value}</div>
-              <div class="stat-label">{stat.label}</div>
-            </div>
-          ))}
+          {homePage.stats.map((stat: {value: string; label: string}, i: number) => {
+            const match = stat.value.match(/^([\d.]+)(.*)$/);
+            const numeric = match ? match[1] : null;
+            const suffix = match ? match[2] : '';
+            return (
+              <div class={`stat-item reveal reveal-delay-${Math.min(i + 1, 6)}`}>
+                {numeric ? (
+                  <div class="stat-value" data-count={numeric} data-suffix={suffix}>0{suffix}</div>
+                ) : (
+                  <div class="stat-value">{stat.value}</div>
+                )}
+                <div class="stat-label">{stat.label}</div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
@@ -58,40 +67,54 @@ import seo from '../../content/seo.json';
   {homePage.featuredServices && (
     <section class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <span class="section-label">What We Offer</span>
           <h2 class="section-title">{services.headline}</h2>
           <p class="section-subtitle">{services.subheadline}</p>
         </div>
         <div class="services-grid">
-          {services.services.slice(0, 3).map((service: {image: string; title: string; description: string; price: string}) => (
-            <div class="service-card">
-              <div class="service-image"><img src={service.image} alt={service.title} loading="lazy" /></div>
+          {services.services.slice(0, 3).map((service: {icon: string; title: string; description: string; price: string}, i: number) => (
+            <div class={`service-card reveal reveal-delay-${i + 1}`}>
+              <div class="service-icon">{service.icon}</div>
               <h3 class="service-title">{service.title}</h3>
               <p class="service-desc">{service.description}</p>
               <span class="service-price">{service.price}</span>
             </div>
           ))}
         </div>
-        <div style="text-align: center; margin-top: 3rem;">
-          <a href="/services" class="btn btn-primary btn-lg">View All Services</a>
+        <div class="reveal" style="text-align: center; margin-top: 3rem;">
+          <a href="/services" class="btn btn-primary btn-lg">View All Academics</a>
         </div>
       </div>
     </section>
   )}
 
+  <!-- Events Teaser -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Stay Connected</span>
+        <h2 class="section-title">Recent School Events</h2>
+        <p class="section-subtitle">See what's been happening across our three campuses</p>
+      </div>
+      <div class="reveal" style="text-align: center;">
+        <a href="/events" class="btn btn-primary btn-lg">View Events</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Testimonials -->
   {homePage.featuredTestimonials && (
-    <section class="section section-alt">
+    <section class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <span class="section-label">Client Feedback</span>
           <h2 class="section-title">{testimonials.headline}</h2>
           <p class="section-subtitle">{testimonials.subheadline}</p>
         </div>
         <div class="testimonials-grid">
-          {testimonials.testimonials.slice(0, 3).map((t: {rating: number; text: string; name: string; company: string; avatar: string}) => (
-            <div class="testimonial-card">
+          {testimonials.testimonials.slice(0, 3).map((t: {rating: number; text: string; name: string; company: string; avatar: string}, i: number) => (
+            <div class={`testimonial-card reveal reveal-delay-${i + 1}`}>
               <div class="testimonial-stars">{'★'.repeat(t.rating)}</div>
               <p class="testimonial-text">"{t.text}"</p>
               <div class="testimonial-author">
@@ -115,14 +138,14 @@ import seo from '../../content/seo.json';
 
   <!-- CTA -->
   <section class="cta-section">
-    <div class="container">
-      <span class="section-label" style="color: var(--color-accent);">Ready to get started?</span>
-      <h2 class="section-title">Let's Work Together</h2>
+    <div class="container reveal">
+      <span class="section-label" style="color: var(--color-accent);">Ready to join us?</span>
+      <h2 class="section-title">Give Your Child a Strong Start</h2>
       <p class="section-subtitle">
-        Contact us today and discover how {company.name} can help you.
+        Apply today or visit one of our three campuses to learn more about {company.name}.
       </p>
       <div class="cta-actions">
-        <a href="/contact" class="btn btn-accent btn-lg">Get a Free Quote</a>
+        <a href="/admissions" class="btn btn-accent btn-lg">Apply Now</a>
         <a href="tel:{company.phone}" class="btn btn-ghost btn-lg">
           📞 {company.phone}
         </a>
