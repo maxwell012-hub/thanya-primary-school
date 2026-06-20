@@ -6,11 +6,11 @@
 
 /* ── CSS Custom Properties ─────────────────────── */
 :root {
-  --color-primary: #003d82;
-  --color-primary-dark: color-mix(in srgb, #003d82 80%, black);
-  --color-primary-light: color-mix(in srgb, #003d82 20%, white);
-  --color-accent: #f5a623;
-  --color-accent-dark: color-mix(in srgb, #f5a623 80%, black);
+  --color-primary: #7a1f2b;
+  --color-primary-dark: color-mix(in srgb, #7a1f2b 80%, black);
+  --color-primary-light: color-mix(in srgb, #7a1f2b 12%, white);
+  --color-accent: #c9a14a;
+  --color-accent-dark: color-mix(in srgb, #c9a14a 80%, black);
 
   --color-text: #0f172a;
   --color-text-muted: #64748b;
@@ -562,6 +562,25 @@ input, textarea, select { font-family: inherit; }
   transform: translateY(-4px);
 }
 .service-card:hover .service-icon { background: var(--color-primary); color: #fff; }
+
+.service-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-5);
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.05);
+}
 
 .service-icon {
   width: 56px;

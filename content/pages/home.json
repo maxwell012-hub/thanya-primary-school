@@ -10,7 +10,7 @@
       "label": "Our Campuses",
       "href": "/campuses"
     },
-    "backgroundImage": "/images/hero.jpg"
+    "backgroundImage": "/images/background.png"
   },
   "featuredServices": true,
   "featuredTestimonials": true,
@@ -21,11 +21,7 @@
       "label": "Current Learners"
     },
     {
-      "value": "98%",
-      "label": "Matric Pass Rate"
-    },
-    {
-      "value": "30+",
+      "value": "10+",
       "label": "Years of Excellence"
     }
   ]

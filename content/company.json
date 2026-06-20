@@ -6,11 +6,11 @@
   "phone": "+27 (0) 00 000 0000",
   "email": "info@yourbusiness.co.za",
   "address": {
-    "street": "123 Business Street",
-    "suburb": "Sandton",
-    "city": "Johannesburg",
-    "province": "Gauteng",
-    "postal": "2196",
+    "street": "45 Heystek Street",
+    "suburb": "",
+    "city": "Rustenburg",
+    "province": "North Wess",
+    "postal": "0300",
     "country": "South Africa"
   },
   "hours": {

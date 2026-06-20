@@ -5,37 +5,26 @@
     {
       "title": "Foundation Phase",
       "description": "Grades R–3: Building strong foundations in literacy and numeracy.",
-      "icon": "📚",
+      "image": "/images/programmes/foundation-phase.jpg",
       "price": "Enrol Now"
     },
     {
       "title": "Intermediate Phase",
-      "description": "Grades 4–6: Expanding knowledge across all subjects.",
-      "icon": "✏️",
+      "description": "Grades 4–8: Expanding knowledge across all subjects.",
+      "image": "/images/programmes/intermediate-phase.jpg",
       "price": "Enrol Now"
     },
-    {
-      "title": "Senior Phase",
-      "description": "Grades 7–9: Preparing learners for high school success.",
-      "icon": "🎓",
-      "price": "Enrol Now"
-    },
-    {
-      "title": "FET Phase",
-      "description": "Grades 10–12: Matric preparation with subject specialisation.",
-      "icon": "🏫",
-      "price": "Enrol Now"
-    },
+    
     {
       "title": "Extra-Murals",
       "description": "Sports, arts, music, and culture programmes.",
-      "icon": "⚽",
+      "image": "/images/programmes/extra-murals.jpg",
       "price": "Included"
     },
     {
       "title": "Support Services",
       "description": "LSEN support, counselling, and remedial assistance.",
-      "icon": "❤️",
+      "image": "/images/programmes/support.png",
       "price": "Available"
     }
   ]
