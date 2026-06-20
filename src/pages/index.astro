@@ -89,8 +89,11 @@ import seo from '../../content/seo.json';
     </section>
   )}
 
-  <!-- Events Teaser -->
-  <section class="section section-alt">
+    <!-- Events Teaser -->
+  <section
+    class="section section-bg-image"
+    style={`--section-bg-image: url('${homePage.eventsTeaser?.backgroundImage || '/images/events-bg.jpg'}')`}
+  >
     <div class="container">
       <div class="section-header reveal">
         <span class="section-label">Stay Connected</span>
@@ -98,7 +101,7 @@ import seo from '../../content/seo.json';
         <p class="section-subtitle">See what's been happening across our three campuses</p>
       </div>
       <div class="reveal" style="text-align: center;">
-        <a href="/events" class="btn btn-primary btn-lg">View Events</a>
+        <a href="/events" class="btn btn-accent btn-lg">View Events</a>
       </div>
     </div>
   </section>

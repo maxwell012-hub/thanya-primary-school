@@ -15,6 +15,9 @@
   "featuredServices": true,
   "featuredTestimonials": true,
   "showStats": true,
+  "eventsTeaser": {
+    "backgroundImage": "/images/events-bg.png"
+  },
   "stats": [
     {
       "value": "1200+",
